@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido de Pizza</title>
+</head>
+<body>
+
+<h1>Pedido de pizza</h1>
+
+<form action="procesar_pedido.php" method="post">
+
+    <!-- Bloque 1: La pizza -->
+    <fieldset>
+        
+        <legend>La pizza</legend>
+        
+        <p>
+            <b>Ingredientes</b><br>
+            <input type="checkbox" name="ingrediente" value="Queso"> Queso <br>
+            <input type="checkbox" name="ingrediente" value="Pimiento"> Pimiento <br>
+            <input type="checkbox" name="ingrediente" value="Cebolla"> Cebolla <br>
+        </p>
+        
+        <p>
+            <b>Tamaño</b><br>
+            <input type="radio" name="tamano" value="Pequeña"> Pequeña <br>
+            <input type="radio" name="tamano" value="Mediana"> Mediana <br>
+            <input type="radio" name="tamano" value="Grande"> Grande <br>
+        </p>
+        
+    </fieldset>
+
+    <!-- Bloque 2: Datos de entrega -->
+    <fieldset>
+        <legend>Datos de entrega</legend>
+        
+        <p>
+            Nombre: <input type="text" name="nombre" size="30">
+        </p>
+        <p>
+            Dirección: <input type="text" name="direccion" size="30">
+        </p>
+        <p>
+            Teléfono: <input type="text" name="telefono" size="15">
+        </p>
+        <p>
+            Instrucciones especiales:<br>
+            <textarea name="instrucciones" rows="4" cols="40"></textarea>
+        </p>
+        
+    </fieldset>
+
+    <!-- Bloque 3: Método de pago -->
+    <fieldset>
+        <legend>Método de pago</legend>
+        
+        <p>
+            <select name="pago">
+                <option value="Efectivo">Efectivo</option>
+                <option value="Tarjeta">Tarjeta</option>
+                <option value="Bizum">Bizum</option>
+            </select>
+        </p>
+        
+        <p>
+            <input type="submit" value="Ok">
+        </p>
+        
+    </fieldset>
+
+</form>
+
+</body>
+</html>
